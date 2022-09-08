@@ -1,0 +1,13 @@
+<div class="p-t-55">
+    <h4 class="mtext-112 cl2 p-b-33">Категории</h4>
+    <ul>
+        {% for item in categories %}
+            <li class="bor18">
+                <a href="{{ item.get_absolute_url }}" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4">
+                    {{ item.title }}
+                    <span class="badge bg-primary rounded-pill">{{ item.cnt }}</span>
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>

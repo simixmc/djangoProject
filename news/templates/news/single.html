@@ -1,0 +1,46 @@
+{% extends 'news/base.html' %}
+
+{% load static %}
+
+{% block title %} {{ item.title }} {% endblock %}
+{% block title_page %}{% endblock %}
+
+{% block description %}{% endblock %}
+
+{% block  breadcrumb %}
+    <section class="bg0 p-t-64">
+        {% include 'news/inc/_breadcrumb.html' %}
+    </section>
+{% endblock %}
+
+{% block container %}
+    <div class="col-md-8 col-lg-9 p-b-80">
+        <div class="p-r-45 p-r-0-lg">
+            <div class="wrap-pic-w how-pos5-parent">
+                <img src="{% static 'images/blog-04.jpg' %}" alt="IMG-BLOG">
+                <div class="flex-col-c-m size-123 bg9 how-pos5">
+                    <span class="ltext-107 cl2 txt-center">
+                        {{ item.updated_at|date:'d' }}
+                    </span>
+                    <span class="stext-109 cl3 txt-center">
+                        {{ item.updated_at|date:'M' }} {{ item.updated_at|date:'Y' }}
+                    </span>
+                </div>
+            </div>
+            <div class="p-t-32">
+                <span class="flex-w flex-m stext-111 cl2 p-b-19">
+                    <span>
+                        {{ item.updated_at|date:'d' }} {{ item.updated_at|date:'M' }}, {{ item.updated_at|date:'Y' }}
+                        <span class="cl12 m-l-4 m-r-6">|</span>
+                    </span>
+                    <span>
+                        <a href="{{ item.category.get_absolute_url }}">{{ item.category }}</a>
+                        <span class="cl12 m-l-4 m-r-6">|</span>
+                    </span>
+                </span>
+                <h4 class="ltext-109 cl2 p-b-28">{{ item.title }}</h4>
+                <p class="stext-117 cl6 p-b-26">{{ item.content }}</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
