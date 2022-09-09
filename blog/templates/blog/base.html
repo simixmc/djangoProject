@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block description %}
+    <section>
+        <div class="container">
+            Тут будет описание раздела
+        </div>
+    </section>
+{% endblock %}
+
+{% block content %}
+    <section class="bg0 p-t-64 p-b-60">
+		<div class="container">
+			<div class="row">
+                {% block container %}{% endblock %}
+                {% include 'blog/inc/_side_menu.html' %}
+			</div>
+		</div>
+	</section>
+{% endblock %}

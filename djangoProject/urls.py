@@ -23,6 +23,7 @@ import main.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('news/', include('news.urls')),
+    path('blog/', include('blog.urls')),
     path('', include('main.urls')),
     path('__debug__/', include('debug_toolbar.urls')),
 ]
