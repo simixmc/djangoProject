@@ -38,19 +38,7 @@
                 </a>
 
                 <!-- Menu desktop -->
-                <div class="menu-desktop">
-                    <ul class="main-menu">
-                        <li>
-                            <a href="{% url 'main' %}">Главная</a>
-                        </li>
-                        <li>
-                            <a href="{% url 'news|index' %}">Новости</a>
-                        </li>
-                        <li>
-                            <a href="{% url 'blog|index' %}">Статьи</a>
-                        </li>
-                    </ul>
-                </div>
+                {% include 'inc/_menu_desktop.html' %}
 
                 <!-- Icon header -->
                 <div class="wrap-icon-header flex-w flex-r-m">
