@@ -10,4 +10,9 @@ class CategoryAdmin(DraggableMPTTAdmin):
     mptt_level_indent = 20
 
 
+class BlogAdmin(admin.ModelAdmin):
+    prepopulated_fields = {'slug': ('title',)}
+
+
 admin.site.register(Category, CategoryAdmin)
+admin.site.register(Blog, BlogAdmin)

@@ -3,8 +3,9 @@
 {% load static %}
 
 {% block title %} {{ title_page }} {% endblock %}
+
 {% block  title_page %}
-    <section class="bg-img1 txt-center p-lr-15 p-tb-92">
+    <section class="bg-img1 txt-center p-lr-15 p-tb-20">
 		<h2 class="cl2 ltext-105">{{ title_page }}</h2>
 	</section>
 {% endblock %}
@@ -12,7 +13,7 @@
 {% block container %}
     <div class="col-md-8 col-lg-9 p-b-80">
         <div class="p-r-45 p-r-0-lg">
-            {% for item in news %}
+            {% for item in page_obj %}
                 <!-- item blog -->
                 {% include 'news/inc/_item.html' %}
             {% empty %}
@@ -21,7 +22,7 @@
 
             {% if page_obj and page_obj.paginator.num_pages > 1 %}
                 <!-- Pagination -->
-                {% include 'news/inc/_pagination.html' %}
+                {% include 'blog/inc/_pagination.html' %}
             {% endif %}
         </div>
     </div>

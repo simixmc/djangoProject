@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="bread-crumb flex-w p-t-30 p-lr-0-lg">
+        <a href="{% url 'main' %}" class="stext-109 cl8 hov-cl1 trans-04">
+            <i class="fa fa-home"></i>
+            <i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
+        </a>
+        {% if breadcrumb|length > 1 %}
+            {% for item_breadcrumb in breadcrumb %}
+                {% if forloop.last and item.title == null %}
+                    <span class="stext-109 cl4">
+                        {{ item_breadcrumb.title }}
+                    </span>
+                {% else %}
+                    <a href="{{ item_breadcrumb.url }}" class="stext-109 cl8 hov-cl1 trans-04">
+                        {{ item_breadcrumb.title }}
+                        <i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
+                    </a>
+                {% endif %}
+            {% endfor %}
+
+            <span class="stext-109 cl4">
+                {{ item.title }}
+            </span>
+
+        {% else %}
+            <span class="stext-109 cl4">
+                {{ breadcrumb.0.title }}
+            </span>
+        {% endif %}
+    </div>
+</div>

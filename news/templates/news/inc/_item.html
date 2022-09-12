@@ -2,7 +2,11 @@
 
 <div class="p-b-63">
     <a href="{{ item.get_absolute_url }}" class="hov-img0 how-pos5-parent">
-        <img src="{% static 'images/blog-04.jpg' %}" alt="IMG-BLOG">
+        {% if item.photo %}
+            <img src="{% get_media_prefix %}{{ item.photo }}" alt="IMG-BLOG">
+        {% else %}
+            <div class="p-tb-50" style="background: #f1f1f1"></div>
+        {% endif %}
         <div class="flex-col-c-m size-123 bg9 how-pos5">
             <span class="ltext-107 cl2 txt-center">
                 {{ item.updated_at|date:'d' }}

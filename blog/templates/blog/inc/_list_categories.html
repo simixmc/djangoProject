@@ -1,0 +1,14 @@
+{% load mptt_tags %}
+
+<ul>
+    {% recursetree categories %}
+        <li class="bor18">
+            <a href="{{ node.get_absolute_url }}" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4">{{ node.title }}</a>
+            {% if not node.is_leaf_node %}
+                <ul style="margin-left: 15px;">
+                    {{ children }}
+                </ul>
+            {% endif %}
+        </li>
+    {% endrecursetree %}
+</ul>

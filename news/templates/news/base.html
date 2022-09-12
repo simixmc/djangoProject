@@ -3,11 +3,11 @@
 {% load static %}
 
 
-{% block description %}
-    <section>
-        <div class="container">
-            Тут будет описание раздела
-        </div>
+{% block description %}{% endblock %}
+
+{% block  breadcrumb %}
+    <section class="bg0 p-t-64">
+        {% include 'blog/inc/_breadcrumb.html' %}
     </section>
 {% endblock %}
 
