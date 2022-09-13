@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'news.apps.NewsConfig',
     'main.apps.MainConfig',
     'blog.apps.BlogConfig',
+    'menu.apps.MenuConfig',
 ]
 
 MIDDLEWARE = [

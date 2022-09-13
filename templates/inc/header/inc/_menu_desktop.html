@@ -1,0 +1,17 @@
+{% load mptt_tags %}
+
+
+<div class="menu-desktop">
+    <ul class="main-menu">
+        {% recursetree main_menu %}
+            <li>
+                <a href="/{{ node.path }}">{{ node.title }}</a>
+                {% if not node.is_leaf_node %}
+                    <ul class="sub-menu">
+                        {{ children }}
+                    </ul>
+                {% endif %}
+            </li>
+        {% endrecursetree %}
+    </ul>
+</div>
