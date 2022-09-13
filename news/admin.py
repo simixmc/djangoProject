@@ -10,7 +10,6 @@ class NewsAdmin(admin.ModelAdmin):
     search_fields = ('title',)
     list_editable = ('is_published',)
     list_filter = ('category', 'is_published')
-    # fields = ('category', 'title', 'slug', 'content', 'photo', 'get_photo', 'is_published', 'created_at', 'updated_at')
     fieldsets = [
         ('Основные настройки', {
             'fields': ['category', 'title', 'slug', 'is_published'],
