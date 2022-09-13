@@ -32,12 +32,14 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     # 'jazzmin',
+    'adminlteui',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'treebeard',
 
     'debug_toolbar',
     'mptt',
@@ -146,61 +148,21 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-JAZZMIN_SETTINGS = {
-    "site_title": "RIKI-Admin",
-    "site_header": "RIKI-Admin",
-    "site_brand": "RIKI-Admin",
-    "copyright": "create by Rikisan",
-
-    "show_sidebar": True,
-    "show_ui_builder": True,
-
-    "custom_css": "common/css/main.css",
-
-    "icons": {
-        "auth": "fas fa-users-cog",
-        "auth.user": "fas fa-user",
-        "auth.Group": "fas fa-users",
-        "news.News": "fas fa-newspaper",
-        "news.Category": "fas fa-th-list",
-    },
-
-    "changeform_format": "collapsible",
-}
-
-JAZZMIN_UI_TWEAKS = {
-    "navbar_small_text": False,
-    "footer_small_text": True,
-    "body_small_text": False,
-    "brand_small_text": True,
-    "brand_colour": False,
-    "accent": "accent-primary",
-    "navbar": "navbar-dark",
-    "no_navbar_border": False,
-    "navbar_fixed": False,
-    "layout_boxed": False,
-    "footer_fixed": False,
-    "sidebar_fixed": True,
-    "sidebar": "sidebar-dark-primary",
-    "sidebar_nav_small_text": True,
-    "sidebar_disable_expand": False,
-    "sidebar_nav_child_indent": False,
-    "sidebar_nav_compact_style": False,
-    "sidebar_nav_legacy_style": False,
-    "sidebar_nav_flat_style": True,
-    "theme": "superhero",
-    "dark_mode_theme": "superhero",
-    "button_classes": {
-        "primary": "btn-primary",
-        "secondary": "btn-secondary",
-        "info": "btn-outline-info",
-        "warning": "btn-outline-warning",
-        "danger": "btn-outline-danger",
-        "success": "btn-outline-success"
-    },
-    "actions_sticky_top": False
-}
-
 INTERNAL_IPS = [
     "127.0.0.1",
 ]
+
+ADMINLTE_SETTINGS = {
+    'copyright': 'Vitaly Pitalenko',
+    'apps': {
+        'blog': {
+            'icon': 'fa-rss'
+        },
+        'menu': {
+            'icon': 'fa-bars'
+        },
+        'news': {
+            'icon': 'fa-newspaper-o'
+        }
+    }
+}
