@@ -5,7 +5,7 @@
     <ul class="main-menu">
         {% recursetree main_menu %}
             <li>
-                <a href="/{{ node.path }}">{{ node.title }}</a>
+                <a href="/{{ node.path|default:'' }}">{{ node.title }}</a>
                 {% if not node.is_leaf_node %}
                     <ul class="sub-menu">
                         {{ children }}

@@ -1,0 +1,17 @@
+<section class="p-t-40 p-b-10 teaser">
+    <div class="container">
+        <div class="row justify-content-center">
+            {% for item in teaser %}
+                <div class="col-md-3 row m-b-30">
+                    <div class="col-3 fs-40 text-center d-flex align-items-center" style="color: {{ item.color }}">
+                        <i class="{{ item.icon }}"></i>
+                    </div>
+                    <div class="col-9">
+                        <span class="font-weight-bold fs-18" style="color: {{ item.color }}">{{ item.title }}</span>
+                        <p class="fs-12">{{ item.description }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

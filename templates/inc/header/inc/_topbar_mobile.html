@@ -2,7 +2,7 @@
     <li>
         <div class="right-top-bar flex-w h-full">
             {% for item in topbar_mobile %}
-                <a href="/{{ item.path }}" class="flex-c-m p-lr-10 trans-04">
+                <a href="/{{ item.path|default:'' }}" class="flex-c-m p-lr-10 trans-04">
                     {{ item.title }}
                 </a>
             {% endfor %}

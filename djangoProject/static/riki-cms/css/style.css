@@ -1,0 +1,118 @@
+.header-transparent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.navbar-top {
+    position: relative;
+    z-index: 110;
+    display: flex;
+    align-items: center;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+.header-transparent .navbar-top:not(.navbar-collapsed) {
+    background-color: transparent !important;
+}
+
+.header-transparent .navbar-top {
+    border: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.border-bottom.navbar-dark {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+.navbar-top .navbar-nav {
+    flex-direction: row;
+}
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    color: #fff;
+}
+.ml-auto, .mx-auto {
+    margin-left: auto !important;
+}
+.mr-3, .mx-3 {
+    margin-right: 1rem !important;
+}
+.address__text {
+    font-size: .867em;
+    line-height: 1.5379em;
+    max-width: 320px;
+    color: #fff;
+}
+.address__text i {
+    margin-right: 10px;
+}
+.social-block {
+    margin-left: 30px;
+}
+.social-block .social-link {
+    margin: 5px;
+    color: #fff
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+}
+
+.main-navbar {
+    background-color: #232323e3;
+    padding: 20px;
+    border-radius: 4px;
+}
+.navbar {
+    position: relative;
+    z-index: 101;
+}
+.header-transparent .navbar:not(.sticky):not(.navbar-collapsed) {
+    background-color: transparent !important;
+    border: 0;
+    box-shadow: none;
+}
+.nav-item .nav-link {
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+}
+.nav-link i {
+    margin-right: 10px;
+}
+@media (min-width: 992px){
+    .mr-lg-5, .mx-lg-5 {
+        margin-right: 3rem !important;
+    }
+    .navbar-expand-lg .navbar-nav {
+        flex-direction: row;
+    }
+    .ml-lg-auto, .mx-lg-auto {
+        margin-left: auto !important;
+    }
+}
+
+.slide {
+    color: #fff;
+}
+.banners_top-text {
+    font-size: .933em;
+    line-height: 1.429em;
+    opacity: .5;
+    margin-bottom: 9px;
+}
+.banners_title {
+    width: 65%;
+    font-family: "Roboto", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 65px;
+}
+.banners_text {
+    width: 50%;
+    margin-top: 15px;
+    font-size: 1.2em;
+    line-height: 28px;
+}
